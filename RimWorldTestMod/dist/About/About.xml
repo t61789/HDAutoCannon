@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>RimWorldTestMod</name>
+	<author>Aki146</author>
+	<packageId>aki146.rimworldtestmod</packageId>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<description>用来测试的Mod</description>
+</ModMetaData>
