@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using LudeonTK;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -14,12 +15,44 @@ namespace RimWorldTestMod
         public float commonModeExplosionRadius = 1.1f;
         public float commonModeArmorPenetration = 0.2f;
         public float commonModeArmorDirectHitPenetration = 0.5f;
+        public bool explosionDamageFallOff = true;
         
         public static readonly HDCannonExtension DEFAULT = new HDCannonExtension();
     }
     
     public class Projectile_HDCannonBullet : Projectile
     {
+        private Comp_HDCannonMode _hdCannonMode;
+        
+        public override void Launch(Thing launcher,
+            Vector3 origin,
+            LocalTargetInfo usedTarget,
+            LocalTargetInfo intendedTarget,
+            ProjectileHitFlags hitFlags, 
+            bool preventFriendlyFire = false, 
+            Thing equipment = null,
+            ThingDef targetCoverDef = null)
+        {
+            base.Launch(launcher, origin, usedTarget, intendedTarget, hitFlags, preventFriendlyFire, equipment, targetCoverDef);
+            
+            _hdCannonMode = Utils.GetHdCannonModes(launcher as Pawn);
+            if (_hdCannonMode == null)
+            {
+                return;
+            }
+            var originOffset = _hdCannonMode.Props.muzzleOffset;
+            var fromOriginToDest = (intendedTarget.CenterVector3 - origin).normalized;
+            var muzzlePos = origin + Quaternion.LookRotation(fromOriginToDest) * originOffset;
+            
+            FleckMaker.ThrowSmoke(muzzlePos, MapHeld, 1);
+            
+            FleckMaker.Static(muzzlePos, MapHeld, FleckDefOf.ShotFlash, 10);
+            
+            var fleck = FleckMaker.GetDataStatic(muzzlePos, MapHeld, _hdCannonMode.Props.muzzleFleckDef, _hdCannonMode.Props.muzzleFleckScale);
+            fleck.rotation = fromOriginToDest.ToAngleFlat();
+            MapHeld.flecks.CreateFleck(fleck);
+        }
+
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
             var extension = def.GetModExtension<HDCannonExtension>() ?? HDCannonExtension.DEFAULT;
@@ -56,7 +89,7 @@ namespace RimWorldTestMod
                     def.projectile.preExplosionSpawnChance,
                     def.projectile.preExplosionSpawnThingCount,
                     0,
-                    true,
+                    extension.explosionDamageFallOff,
                     origin.AngleToFlat(destination),
                     null,
                     null,

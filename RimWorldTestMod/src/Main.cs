@@ -4,9 +4,9 @@ using Verse;
 namespace RimWorldTestMod
 {
     [StaticConstructorOnStartup]
-    public static class HDCannon
+    public static class Main
     {
-        static HDCannon()
+        static Main()
         {
             Harmony.DEBUG = true;
             var harmony = new Harmony("rimworldtestmod.hd_cannon");

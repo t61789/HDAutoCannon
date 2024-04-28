@@ -1,11 +1,16 @@
 ﻿using System;
+using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace RimWorldTestMod
 {
     public class CompProperties_HDCannonMode : CompProperties
     {
-        public Mode initMode; 
+        public Mode initMode;
+        public Vector3 muzzleOffset = new Vector3(0, 0, 0);
+        public FleckDef muzzleFleckDef = FleckDefOf.ShotFlash;
+        public float muzzleFleckScale = 2;
         
         public CompProperties_HDCannonMode()
         {
@@ -17,7 +22,7 @@ namespace RimWorldTestMod
     {
         public Mode curMode;
         
-        private CompProperties_HDCannonMode Props => props as CompProperties_HDCannonMode;
+        public CompProperties_HDCannonMode Props => props as CompProperties_HDCannonMode;
 
         public override void Initialize(CompProperties props)
         {

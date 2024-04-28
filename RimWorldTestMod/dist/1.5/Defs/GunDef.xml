@@ -8,9 +8,9 @@
         <graphicData>
             <texPath>AutoCannon</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>2.6</drawSize>
+            <drawSize>2.0</drawSize>
         </graphicData>
-        <equippedDistanceOffset>0.35</equippedDistanceOffset>
+        <equippedDistanceOffset>0.24</equippedDistanceOffset>
         <soundInteract>Interact_Rifle</soundInteract>
         <recipeMaker>
             <researchPrerequisite>PrecisionRifling</researchPrerequisite>
@@ -37,14 +37,14 @@
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_TestRocket</defaultProjectile>
+                <defaultProjectile>Bullet_HDAutoCannon</defaultProjectile>
                 <warmupTime>3.0</warmupTime>
                 <range>30.9</range>
-                <burstShotCount>3</burstShotCount>
-                <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+                <burstShotCount>5</burstShotCount>
+                <ticksBetweenBurstShots>23</ticksBetweenBurstShots>
                 <soundCast>Shot_HDAutoCannon</soundCast>
                 <soundCastTail>GunTail_Medium</soundCastTail>
-                <muzzleFlashScale>9</muzzleFlashScale>
+                <muzzleFlashScale>0</muzzleFlashScale>
             </li>
         </verbs>
         <tools>
@@ -69,15 +69,18 @@
         <comps>
             <li Class="RimWorldTestMod.CompProperties_HDCannonMode">
                 <initMode>Common</initMode>
+                <muzzleOffset>(0, 0, 2.1)</muzzleOffset>
+                <muzzleFleckDef>AutoCannonMuzzleFlash</muzzleFleckDef>
+                <muzzleFleckScale>1.3</muzzleFleckScale>
             </li>
         </comps>
     </ThingDef>
     <ThingDef ParentName="BaseBullet">
-        <defName>Bullet_TestRocket</defName>
+        <defName>Bullet_HDAutoCannon</defName>
         <label>rocket</label>
         <thingClass>RimWorldTestMod.Projectile_HDCannonBullet</thingClass>
         <graphicData>
-            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <texPath>Things/Projectile/Bullet_Big</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <projectile>
@@ -94,7 +97,19 @@
                 <commonModeArmorDirectHitPenetration>0.5</commonModeArmorDirectHitPenetration>
                 <commonModeArmorPenetration>0.2</commonModeArmorPenetration>
                 <commonModeExplosionRadius>1.1</commonModeExplosionRadius>
+                <explosionDamageFallOff>false</explosionDamageFallOff>
             </li>
         </modExtensions>
     </ThingDef>
+    
+    <FleckDef ParentName="FleckBase">
+        <defName>AutoCannonMuzzleFlash</defName>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <solidTime>0.03</solidTime>
+        <fadeOutTime>0.07</fadeOutTime>
+        <graphicData>
+            <texPath>MuzzleFlash</texPath>
+            <shaderType>MoteGlow</shaderType>
+        </graphicData>
+    </FleckDef>
 </Defs>

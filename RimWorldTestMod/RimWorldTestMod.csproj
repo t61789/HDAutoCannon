@@ -58,30 +58,25 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Properties\AssemblyInfo.cs"/>
-        <Compile Include="src\Command_SwitchMode.cs" />
+        <Compile Include="src\Commands\Command_SwitchMode.cs" />
         <Compile Include="src\Comp_HDCannonMode.cs" />
-        <Compile Include="src\HarmonyPatches\Verse_PawnRenderUtility_DrawEquipmentAiming.cs" />
         <Compile Include="src\HarmonyPatches\Verse_Pawn_GetGizmos.cs" />
-        <Compile Include="src\HarmonyPatches\Verse_Verb_TryCastNextBurstShot.cs" />
-        <Compile Include="src\HDCannon.cs" />
-        <Compile Include="src\ModResources.cs" />
+        <Compile Include="src\Main.cs" />
         <Compile Include="src\Projectile_HDCannonBullet.cs" />
         <Compile Include="src\Utils.cs" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="dist\1.5\Defs\GunDef.xml" />
-      <Content Include="dist\1.5\Defs\SoundDefs\SoundDef.xml" />
+      <Content Include="dist\1.5\Defs\SoundDef.xml" />
+      <Content Include="dist\1.5\Sounds\HDAutoCannonShot\HDAutoCannonShot.mp3" />
+      <Content Include="dist\1.5\Textures\AntiPersonnel.png" />
+      <Content Include="dist\1.5\Textures\AutoCannon.png" />
+      <Content Include="dist\1.5\Textures\Common.png" />
+      <Content Include="dist\1.5\Textures\MuzzleFlash.png" />
+      <Content Include="dist\1.5\Textures\Piercing.png" />
       <Content Include="dist\About\About.xml" />
       <Content Include="dist\About\LoadFolders.xml" />
       <Content Include="dist\About\Preview.png" />
-      <Content Include="dist\Sounds\HDAutoCannonShot\HDAutoCannonShot.mp3" />
-      <Content Include="dist\Textures\AntiPersonnel.png" />
-      <Content Include="dist\Textures\CommandGearUpAndGo.png" />
-      <Content Include="dist\Textures\CommandGearUpAndGoActive.png" />
-      <Content Include="dist\Textures\Common.png" />
-      <Content Include="dist\Textures\Piercing.png" />
-      <Content Include="dist\Textures\TDGearUpAndGoIcon.png" />
-      <Content Include="dist\Textures\AutoCannon.png" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="dist\1.5\Assemblies\" />
