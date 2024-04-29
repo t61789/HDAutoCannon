@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>RimWorldTestMod</name>
-	<author>Aki146</author>
-	<packageId>aki146.rimworldtestmod</packageId>
+	<name>AutoCannon from HellDivers2</name>
+	<author>北国少年</author>
+	<packageId>aki146.hdac</packageId>
 	<supportedVersions>
 		<li>1.5</li>
 	</supportedVersions>
-	<description>用来测试的Mod</description>
+	<description>Support Weapon - AutoCannon in HellDivers 2</description>
 </ModMetaData>

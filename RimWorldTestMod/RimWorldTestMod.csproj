@@ -60,6 +60,7 @@
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="src\Commands\Command_SwitchMode.cs" />
         <Compile Include="src\Comp_AutoCannon.cs" />
+        <Compile Include="src\HarmonyPatches\RimWorld_StatExtension_GetStatValue.cs" />
         <Compile Include="src\HarmonyPatches\Verse_Pawn_GetGizmos.cs" />
         <Compile Include="src\Main.cs" />
         <Compile Include="src\Projectile_AutoCannonBullet.cs" />
