@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <!-- EN: Common -->
+    <HDAC_ModeName_Common>常规</HDAC_ModeName_Common>
+    <!-- EN: Armor Piercing -->
+    <HDAC_ModeName_Piercing>穿甲</HDAC_ModeName_Piercing>
+    <!-- EN: Current Mode: {0} -->
+    <HDAC_Command_Label>当前模式：{0}</HDAC_Command_Label>
+    <!-- EN: Common Mode. Bullets with fragmentation warheads create small explosions that project fragmentation to kill surrounding unarmored targets. If a direct hit is made, the armor-piercing effect can be increased. -->
+    <HDAC_Command_Description_Common>常规模式。子弹带有破片弹头，可以制造小范围的爆炸，投射出破片以杀伤周围无甲目标。如果直接命中，可以提高穿甲效果。</HDAC_Command_Description_Common>
+    <!-- EN: Armor Piercing Mode. Bullets use a highly hardened armor-piercing warhead that can carry powerful kinetic energy to break through a target's hard armor. -->
+    <HDAC_Command_Description_Piercing>穿甲模式。子弹使用高硬度穿甲弹头，可以携带着强大的动能击破目标的硬装甲。</HDAC_Command_Description_Piercing>
+</LanguageData>

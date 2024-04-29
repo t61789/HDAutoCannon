@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using Verse;
 
-namespace RimWorldTestMod
+namespace HDAC
 {
     public enum Mode
     {
@@ -23,22 +23,22 @@ namespace RimWorldTestMod
     
     public static class Utils
     {
-        public static Comp_HDCannonMode GetHdCannonModes(Pawn pawn)
+        public static Comp_AutoCannon GetAutoCannonComp(Pawn pawn)
         {
             if (pawn == null)
             {
                 return null;
             }
-            return GetHdCannonModes(Enumerable.Repeat(pawn, 1)).FirstOrDefault();
+            return GetAutoCannonComp(Enumerable.Repeat(pawn, 1)).FirstOrDefault();
         }
         
-        public static IEnumerable<Comp_HDCannonMode> GetHdCannonModes(IEnumerable<Pawn> pawns)
+        public static IEnumerable<Comp_AutoCannon> GetAutoCannonComp(IEnumerable<Pawn> pawns)
         {
             var comps = 
                 from pawn in pawns
                 let primary = pawn.equipment.Primary
-                where primary != null && primary.HasComp<Comp_HDCannonMode>()
-                select primary.GetComp<Comp_HDCannonMode>();
+                where primary != null && primary.HasComp<Comp_AutoCannon>()
+                select primary.GetComp<Comp_AutoCannon>();
             
             foreach (var hdCannonMode in comps)
             {

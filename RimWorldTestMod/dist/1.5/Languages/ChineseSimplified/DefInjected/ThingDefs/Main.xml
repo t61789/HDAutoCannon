@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <!-- EN: auto cannon -->
+    <Gun_HDAC_AutoCannon.label>机炮</Gun_HDAC_AutoCannon.label>
+    <!-- EN: Powerful precision auto cannon, can use backpack to speed up loading. -->
+    <Gun_HDAC_AutoCannon.description>高威力的精准机炮，可以使用背包加速装填子弹。</Gun_HDAC_AutoCannon.description>
+    <!-- EN: auto cannon backpack -->
+    <Apparel_HDAC_AutoCannonBackpack.label>机炮背包</Apparel_HDAC_AutoCannonBackpack.label>
+    <!-- EN: Backpack that reloads for AutoCannon (reduces cooldown between shots). -->
+    <Apparel_HDAC_AutoCannonBackpack.description>为机炮装填炮弹的背包（减少机炮冷却时间）。</Apparel_HDAC_AutoCannonBackpack.description>
+</LanguageData>

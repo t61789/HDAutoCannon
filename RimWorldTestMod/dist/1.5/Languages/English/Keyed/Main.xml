@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <HDAC_ModeName_Common>Common</HDAC_ModeName_Common>
+    <HDAC_ModeName_Piercing>Armor Piercing</HDAC_ModeName_Piercing>
+    <HDAC_Command_Label>Current Mode: {0}</HDAC_Command_Label>
+    <HDAC_Command_Description_Common>Common Mode. Bullets with fragmentation warheads create small explosions that project fragmentation to kill surrounding unarmored targets. If a direct hit is made, the armor-piercing effect can be increased.</HDAC_Command_Description_Common>
+    <HDAC_Command_Description_Piercing>Armor Piercing Mode. Bullets use a highly hardened armor-piercing warhead that can carry powerful kinetic energy to break through a target's hard armor.</HDAC_Command_Description_Piercing>
+</LanguageData>

@@ -1,7 +1,7 @@
 ﻿using HarmonyLib;
 using Verse;
 
-namespace RimWorldTestMod
+namespace HDAC
 {
     [StaticConstructorOnStartup]
     public static class Main

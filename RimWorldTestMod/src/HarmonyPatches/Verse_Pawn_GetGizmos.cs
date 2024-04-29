@@ -5,7 +5,7 @@ using HarmonyLib;
 using UnityEngine;
 using Verse;
 
-namespace RimWorldTestMod.HarmonyPatches
+namespace HDAC.HarmonyPatches
 {
     [HarmonyPatch(typeof(Pawn), nameof(Pawn.GetGizmos))]
     public static class Verse_Pawn_GetGizmos
@@ -30,7 +30,7 @@ namespace RimWorldTestMod.HarmonyPatches
                 _modeCounts.Clear();
             }
 
-            Comp_HDCannonMode comp = null;
+            Comp_AutoCannon comp = null;
             var needDraw =
                 __instance.IsColonistPlayerControlled &&
                 __instance.equipment.Primary != null &&
@@ -60,13 +60,7 @@ namespace RimWorldTestMod.HarmonyPatches
                 }
             }
 
-            return max == 0
-                ? null
-                : new Command_SwitchMode
-                {
-                    icon = ModResources.textures[mode],
-                    switchTargetMode = (Mode)((int)(mode + 1) % Enum.GetValues(typeof(Mode)).Length)
-                };
+            return max == 0 ? null : new Command_SwitchMode(mode);
         }
     }
 }

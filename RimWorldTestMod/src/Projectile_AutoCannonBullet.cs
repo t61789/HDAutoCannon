@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using LudeonTK;
-using RimWorld;
+﻿using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace RimWorldTestMod
+namespace HDAC
 {
-    public class HDCannonExtension : DefModExtension
+    public class ModExtension_AutoCannonBullet : DefModExtension
     {
         public float piercingModeArmorPenetration = 1.3f;
         public int piercingModeDamageAmount = 40;
@@ -17,12 +14,12 @@ namespace RimWorldTestMod
         public float commonModeArmorDirectHitPenetration = 0.5f;
         public bool explosionDamageFallOff = true;
         
-        public static readonly HDCannonExtension DEFAULT = new HDCannonExtension();
+        public static readonly ModExtension_AutoCannonBullet DEFAULT = new ModExtension_AutoCannonBullet();
     }
     
-    public class Projectile_HDCannonBullet : Projectile
+    public class Projectile_AutoCannonBullet : Projectile
     {
-        private Comp_HDCannonMode _hdCannonMode;
+        private Comp_AutoCannon _autoCannon;
         
         public override void Launch(Thing launcher,
             Vector3 origin,
@@ -35,12 +32,12 @@ namespace RimWorldTestMod
         {
             base.Launch(launcher, origin, usedTarget, intendedTarget, hitFlags, preventFriendlyFire, equipment, targetCoverDef);
             
-            _hdCannonMode = Utils.GetHdCannonModes(launcher as Pawn);
-            if (_hdCannonMode == null)
+            _autoCannon = Utils.GetAutoCannonComp(launcher as Pawn);
+            if (_autoCannon == null)
             {
                 return;
             }
-            var originOffset = _hdCannonMode.Props.muzzleOffset;
+            var originOffset = _autoCannon.Props.muzzleOffset;
             var fromOriginToDest = (intendedTarget.CenterVector3 - origin).normalized;
             var muzzlePos = origin + Quaternion.LookRotation(fromOriginToDest) * originOffset;
             
@@ -48,14 +45,14 @@ namespace RimWorldTestMod
             
             FleckMaker.Static(muzzlePos, MapHeld, FleckDefOf.ShotFlash, 10);
             
-            var fleck = FleckMaker.GetDataStatic(muzzlePos, MapHeld, _hdCannonMode.Props.muzzleFleckDef, _hdCannonMode.Props.muzzleFleckScale);
+            var fleck = FleckMaker.GetDataStatic(muzzlePos, MapHeld, _autoCannon.Props.muzzleFleckDef, _autoCannon.Props.muzzleFleckScale);
             fleck.rotation = fromOriginToDest.ToAngleFlat();
             MapHeld.flecks.CreateFleck(fleck);
         }
 
         protected override void Impact(Thing hitThing, bool blockedByShield = false)
         {
-            var extension = def.GetModExtension<HDCannonExtension>() ?? HDCannonExtension.DEFAULT;
+            var extension = def.GetModExtension<ModExtension_AutoCannonBullet>() ?? ModExtension_AutoCannonBullet.DEFAULT;
 
             if (hitThing != null)
             {
@@ -135,7 +132,7 @@ namespace RimWorldTestMod
                 return defaultMode;
             }
 
-            var comp = Utils.GetHdCannonModes(pawn);
+            var comp = Utils.GetAutoCannonComp(pawn);
             if (comp == null)
             {
                 return defaultMode;

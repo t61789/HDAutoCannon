@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <ThingDef ParentName="ApparelNoQualityBase">
-        <defName>Apparel_AutoCannonPack</defName>
-        <label>auto cannon pack</label>
+        <defName>Apparel_HDAC_AutoCannonBackpack</defName>
+        <label>auto cannon backpack</label>
         <description>Backpack that reloads for AutoCannon (reduces cooldown between shots).</description>
         <techLevel>Industrial</techLevel>
         <recipeMaker>
@@ -27,7 +27,7 @@
             <Chemfuel>30</Chemfuel>
         </costList>
         <graphicData>
-            <texPath>AutoCannonPack_north</texPath>
+            <texPath>AutoCannonBackpack_north</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <statBases>
@@ -42,7 +42,7 @@
         </thingCategories>
         <generateAllowChance>0.15</generateAllowChance>
         <apparel>
-            <wornGraphicPath>AutoCannonPack</wornGraphicPath>
+            <wornGraphicPath>AutoCannonBackpack</wornGraphicPath>
             <wornGraphicData>
                 <renderUtilityAsPack>true</renderUtilityAsPack>
                 <north>

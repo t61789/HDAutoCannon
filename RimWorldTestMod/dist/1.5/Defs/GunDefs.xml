@@ -75,7 +75,7 @@
             </li>
         </tools>
         <comps>
-            <li Class="RimWorldTestMod.CompProperties_HDCannonMode">
+            <li Class="HDAC.CompProperties_AutoCannon">
                 <initMode>Common</initMode>
                 <muzzleOffset>(0, 0, 2.1)</muzzleOffset>
                 <muzzleFleckDef>AutoCannonMuzzleFlash</muzzleFleckDef>
@@ -86,7 +86,7 @@
     <ThingDef ParentName="BaseBullet">
         <defName>Bullet_HDAC_AutoCannonBullet</defName>
         <label>rocket</label>
-        <thingClass>RimWorldTestMod.Projectile_HDCannonBullet</thingClass>
+        <thingClass>HDAC.Projectile_AutoCannonBullet</thingClass>
         <graphicData>
             <texPath>Things/Projectile/Bullet_Big</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -98,7 +98,7 @@
             <screenShakeFactor>0.2</screenShakeFactor>
         </projectile>
         <modExtensions>
-            <li Class="RimWorldTestMod.HDCannonExtension">
+            <li Class="HDAC.ModExtension_AutoCannonBullet">
                 <piercingModeDamageAmount>40</piercingModeDamageAmount>
                 <piercingModeArmorPenetration>1.3</piercingModeArmorPenetration>
                 <commonModeDamageAmount>20</commonModeDamageAmount>
