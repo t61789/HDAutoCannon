@@ -66,14 +66,18 @@
         <Compile Include="src\Utils.cs" />
     </ItemGroup>
     <ItemGroup>
-      <Content Include="dist\1.5\Defs\GunDef.xml" />
-      <Content Include="dist\1.5\Defs\SoundDef.xml" />
+      <Content Include="dist\1.5\Defs\ApparelDefs.xml" />
+      <Content Include="dist\1.5\Defs\FleckDefs.xml" />
+      <Content Include="dist\1.5\Defs\GunDefs.xml" />
+      <Content Include="dist\1.5\Defs\SoundDefs.xml" />
       <Content Include="dist\1.5\Sounds\HDAutoCannonShot\HDAutoCannonShot.mp3" />
-      <Content Include="dist\1.5\Textures\AntiPersonnel.png" />
       <Content Include="dist\1.5\Textures\AutoCannon.png" />
+      <Content Include="dist\1.5\Textures\AutoCannonPack_east.png" />
+      <Content Include="dist\1.5\Textures\AutoCannonPack_north.png" />
       <Content Include="dist\1.5\Textures\Common.png" />
       <Content Include="dist\1.5\Textures\MuzzleFlash.png" />
       <Content Include="dist\1.5\Textures\Piercing.png" />
+      <Content Include="dist\1.5\Textures\AutoCannonPack_south.png" />
       <Content Include="dist\About\About.xml" />
       <Content Include="dist\About\LoadFolders.xml" />
       <Content Include="dist\About\Preview.png" />

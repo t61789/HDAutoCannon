@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
     <ThingDef ParentName="BaseHumanMakeableGun">
-        <defName>Gun_TestGun</defName>
-        <label>rocket launcher</label>
-        <description>这把枪大概能打出爆炸子弹</description>
-        <tickerType>Normal</tickerType>
+        <defName>Gun_HDAC_AutoCannon</defName>
+        <label>auto cannon</label>
+        <description>Powerful precision auto cannon, can use backpack to speed up loading.</description>
         <graphicData>
             <texPath>AutoCannon</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -13,16 +12,24 @@
         <equippedDistanceOffset>0.24</equippedDistanceOffset>
         <soundInteract>Interact_Rifle</soundInteract>
         <recipeMaker>
-            <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+            <researchPrerequisites>
+                <li>PrecisionRifling</li>
+                <li>GasOperation</li>
+            </researchPrerequisites>
+            <recipeUsers>
+                <li>FabricationBench</li>
+            </recipeUsers>
             <skillRequirements>
-                <Crafting>6</Crafting>
+                <Crafting>5</Crafting>
             </skillRequirements>
             <displayPriority>420</displayPriority>
         </recipeMaker>
-        <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
         <statBases>
-            <WorkToMake>40000</WorkToMake>
-            <Mass>3.5</Mass>
+            <WorkToMake>15000</WorkToMake>
+            <Mass>7</Mass>
             <AccuracyTouch>0.30</AccuracyTouch>
             <AccuracyShort>0.70</AccuracyShort>
             <AccuracyMedium>0.90</AccuracyMedium>
@@ -30,16 +37,17 @@
             <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
         </statBases>
         <costList>
+            <Plasteel>20</Plasteel>
             <Steel>60</Steel>
-            <ComponentIndustrial>7</ComponentIndustrial>
+            <ComponentIndustrial>10</ComponentIndustrial>
         </costList>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
                 <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_HDAutoCannon</defaultProjectile>
+                <defaultProjectile>Bullet_HDAC_AutoCannonBullet</defaultProjectile>
                 <warmupTime>3.0</warmupTime>
-                <range>30.9</range>
+                <range>40</range>
                 <burstShotCount>5</burstShotCount>
                 <ticksBetweenBurstShots>23</ticksBetweenBurstShots>
                 <soundCast>Shot_HDAutoCannon</soundCast>
@@ -53,7 +61,7 @@
                 <capacities>
                     <li>Blunt</li>
                 </capacities>
-                <power>9</power>
+                <power>12</power>
                 <cooldownTime>2</cooldownTime>
             </li>
             <li>
@@ -62,7 +70,7 @@
                     <li>Blunt</li>
                     <li>Poke</li>
                 </capacities>
-                <power>9</power>
+                <power>12</power>
                 <cooldownTime>2</cooldownTime>
             </li>
         </tools>
@@ -76,7 +84,7 @@
         </comps>
     </ThingDef>
     <ThingDef ParentName="BaseBullet">
-        <defName>Bullet_HDAutoCannon</defName>
+        <defName>Bullet_HDAC_AutoCannonBullet</defName>
         <label>rocket</label>
         <thingClass>RimWorldTestMod.Projectile_HDCannonBullet</thingClass>
         <graphicData>
@@ -101,15 +109,4 @@
             </li>
         </modExtensions>
     </ThingDef>
-    
-    <FleckDef ParentName="FleckBase">
-        <defName>AutoCannonMuzzleFlash</defName>
-        <altitudeLayer>MoteOverhead</altitudeLayer>
-        <solidTime>0.03</solidTime>
-        <fadeOutTime>0.07</fadeOutTime>
-        <graphicData>
-            <texPath>MuzzleFlash</texPath>
-            <shaderType>MoteGlow</shaderType>
-        </graphicData>
-    </FleckDef>
 </Defs>

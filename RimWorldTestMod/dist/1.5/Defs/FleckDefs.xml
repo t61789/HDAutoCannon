@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <FleckDef ParentName="FleckBase">
+        <defName>AutoCannonMuzzleFlash</defName>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <solidTime>0.03</solidTime>
+        <fadeOutTime>0.07</fadeOutTime>
+        <graphicData>
+            <texPath>MuzzleFlash</texPath>
+            <shaderType>MoteGlow</shaderType>
+        </graphicData>
+    </FleckDef>
+</Defs>
+
