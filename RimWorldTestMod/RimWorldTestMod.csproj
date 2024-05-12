@@ -62,6 +62,7 @@
         <Compile Include="src\Comp_AutoCannon.cs" />
         <Compile Include="src\HarmonyPatches\RimWorld_StatExtension_GetStatValue.cs" />
         <Compile Include="src\HarmonyPatches\Verse_Pawn_GetGizmos.cs" />
+        <Compile Include="src\HarmonyPatches\Verse_VerbUtility_UsesExplosiveProjectiles.cs" />
         <Compile Include="src\Main.cs" />
         <Compile Include="src\Projectile_AutoCannonBullet.cs" />
         <Compile Include="src\Utils.cs" />
