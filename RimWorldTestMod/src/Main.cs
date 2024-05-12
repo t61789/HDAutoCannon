@@ -8,7 +8,9 @@ namespace HDAC
     {
         static Main()
         {
-            Harmony.DEBUG = true;
+            // #if DEBUG
+            // Harmony.DEBUG = true;
+            // #endif
             var harmony = new Harmony("rimworldtestmod.hd_cannon");
             harmony.PatchAll();
         }

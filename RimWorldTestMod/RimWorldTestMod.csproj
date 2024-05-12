@@ -67,27 +67,27 @@
         <Compile Include="src\Utils.cs" />
     </ItemGroup>
     <ItemGroup>
-      <Content Include="dist\1.5\Defs\ApparelDefs.xml" />
-      <Content Include="dist\1.5\Defs\FleckDefs.xml" />
-      <Content Include="dist\1.5\Defs\GunDefs.xml" />
-      <Content Include="dist\1.5\Defs\SoundDefs.xml" />
-      <Content Include="dist\1.5\Languages\ChineseSimplified\DefInjected\ThingDefs\Main.xml" />
-      <Content Include="dist\1.5\Languages\ChineseSimplified\Keyed\Main.xml" />
-      <Content Include="dist\1.5\Languages\English\Keyed\Main.xml" />
-      <Content Include="dist\1.5\Sounds\HDAutoCannonShot\HDAutoCannonShot.mp3" />
-      <Content Include="dist\1.5\Textures\AutoCannon.png" />
-      <Content Include="dist\1.5\Textures\AutoCannonBackpack_east.png" />
-      <Content Include="dist\1.5\Textures\AutoCannonBackpack_north.png" />
-      <Content Include="dist\1.5\Textures\Common.png" />
-      <Content Include="dist\1.5\Textures\MuzzleFlash.png" />
-      <Content Include="dist\1.5\Textures\Piercing.png" />
-      <Content Include="dist\1.5\Textures\AutoCannonBackpack_south.png" />
       <Content Include="dist\About\About.xml" />
-      <Content Include="dist\About\LoadFolders.xml" />
       <Content Include="dist\About\Preview.png" />
+      <Content Include="dist\About\PublishedFileId.txt" />
+      <Content Include="dist\Defs\ApparelDefs.xml" />
+      <Content Include="dist\Defs\FleckDefs.xml" />
+      <Content Include="dist\Defs\GunDefs.xml" />
+      <Content Include="dist\Defs\SoundDefs.xml" />
+      <Content Include="dist\Languages\ChineseSimplified\DefInjected\ThingDefs\Main.xml" />
+      <Content Include="dist\Languages\ChineseSimplified\Keyed\Main.xml" />
+      <Content Include="dist\Languages\English\Keyed\Main.xml" />
+      <Content Include="dist\Sounds\HDAutoCannonShot\HDAutoCannonShot.mp3" />
+      <Content Include="dist\Textures\AutoCannon.png" />
+      <Content Include="dist\Textures\AutoCannonBackpack_east.png" />
+      <Content Include="dist\Textures\AutoCannonBackpack_north.png" />
+      <Content Include="dist\Textures\AutoCannonBackpack_south.png" />
+      <Content Include="dist\Textures\Common.png" />
+      <Content Include="dist\Textures\MuzzleFlash.png" />
+      <Content Include="dist\Textures\Piercing.png" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="dist\1.5\Assemblies\" />
+      <Folder Include="dist\Assemblies\" />
     </ItemGroup>
     <ItemGroup>
       <None Include="App.config" />
